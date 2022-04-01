@@ -16,14 +16,17 @@ const routes: Routes = [
   {path:'employees',
   canActivate:[LoginGuardGuard],
   component:EmployeeListComponent},
+
   {path:'create-employee',
   canActivate:[LoginGuardGuard],
   component:CreateEmployeeComponent},
+
   {
     path:'update-employee/:id',
     canActivate:[UpdateEmployeeGuardGuard,LoginGuardGuard],
     component:UpdateEmployeeComponent
   },
+  
   {
     path:'view-employee/:id',
     canActivate:[ViewEmployeeGuardGuard,LoginGuardGuard],

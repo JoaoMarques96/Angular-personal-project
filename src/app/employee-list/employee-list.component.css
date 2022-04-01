@@ -2,7 +2,7 @@ h2.headcenter {
     text-align: center;
   }
 
-  input[type=text] {
+  input[id=teste] {
     width: 230px;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -15,6 +15,19 @@ h2.headcenter {
     transition: width 0.4s ease-in-out;
   }
   
-  input[type=text]:focus {
+  input[id=teste]:focus {
     width: 100%;
+  }
+
+  #testebutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    align-content: center;
+    height: 45px;
   }

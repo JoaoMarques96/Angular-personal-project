@@ -22,6 +22,10 @@ export class AppComponent {
       show =>this.showMenu =show 
     );
   }
+
+  loginUeeser(){
+    this._employeeService.loginUser
+  }
 }
 
 

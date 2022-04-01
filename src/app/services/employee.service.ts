@@ -39,7 +39,7 @@ import { EventEmitter } from '@angular/core';
     }
 
     updateEmployee(id: number, employee: Employee): Observable<Object>{
-      return this._httpClient.put(`${this.baseURL}/${id}`, employee);
+      return this._httpClient.put(`${this.baseURL}/${id}`,employee);
     }
 
 
@@ -47,26 +47,32 @@ import { EventEmitter } from '@angular/core';
       return this._httpClient.delete(`${this.baseURL}/${id}`);
     }
 
+   
+//loginUser(user:User){
+ // this._httpClient.post
+//}
+
+
     loginUser(user:User){
 
-      if(user.username==="joao@hotmail.com" && user.password==="123"){
+       if(user.username==="joao@hotmail.com" && user.password==="1234"){
 
-        this.userAuthentication = true;
+      this.userAuthentication = true;
 
-        this.showMenu.emit(true);
+  this.showMenu.emit(true);
 
-        this.router.navigate(['/employees']);
-      }
+    this.router.navigate(['/employees']);
+   }
       else {
-        this.userAuthentication = false;
-        
-        this.showMenu.emit(false);
-      }
+       this.userAuthentication = false;
+       
+       this.showMenu.emit(false);
+   }
      
-    }
+   }
   userAuthenticated(){
-    return this.userAuthentication;
-}
+   return this.userAuthentication;
+ }
     
 
-  }
+   }
